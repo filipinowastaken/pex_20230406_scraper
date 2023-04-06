@@ -90,7 +90,7 @@ async def stt_as(start_=10000, end_=911218):
         tasks = []
         while int(di_id) <= int(end_):
             # create multiple tasks for each url
-            for i in range(20+1):
+            for i in range(10+1):
                 url = f'https://www.pinoyexchange.com/discussion/{di_id}'
                 curlink_task = asyncio.create_task(get_link_next(url))
                 tasks.append(curlink_task)
